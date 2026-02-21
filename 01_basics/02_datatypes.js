@@ -97,3 +97,31 @@ console.table(
 
 /* =============================== Datatypes Summary =========================================== */
 
+
+// Primitive => 7 Types
+// String, Number, Boolean, null, undefined, Symbol, Bigint
+
+// Non - primitive / Reference Type
+// Array, Object, Function
+
+const number = 100; // Number
+const numInDecimal = 33.33; // Number
+const bigNum = 345688910111234689997765456778n; //bigInt
+const userId = Symbol("123456789"); // Symbol
+const username = "huzaifa"; // String
+const temp = null; // object
+let fullname; // undefined
+
+
+let heroes = ["Hulk", "Thor", "Iron Man", "Black Panther", "Spider Man", "Sang Chi"]; // Object
+let avenger = {
+    username: "tony_stark",
+    age: 35,
+    avengersId: 2,
+    role: "Iron Man",
+    perks: "Manager"
+} // Object
+
+const myFnc = function() {
+    console.log("Hello World");
+} // Function
