@@ -104,24 +104,47 @@ console.table(
 // Non - primitive / Reference Type
 // Array, Object, Function
 
-const number = 100; // Number
-const numInDecimal = 33.33; // Number
-const bigNum = 345688910111234689997765456778n; //bigInt
-const userId = Symbol("123456789"); // Symbol
-const username = "huzaifa"; // String
-const temp = null; // object
-let fullname; // undefined
+// const number = 100; // Number
+// const numInDecimal = 33.33; // Number
+// const bigNum = 345688910111234689997765456778n; //bigInt
+// const userId = Symbol("123456789"); // Symbol
+// const username = "huzaifa"; // String
+// const temp = null; // object
+// let fullname; // undefined
 
 
-let heroes = ["Hulk", "Thor", "Iron Man", "Black Panther", "Spider Man", "Sang Chi"]; // Object
+// let heroes = ["Hulk", "Thor", "Iron Man", "Black Panther", "Spider Man", "Sang Chi"]; // Object
+// let avenger = {
+//     username: "tony_stark",
+//     age: 35,
+//     avengersId: 2,
+//     role: "Iron Man",
+//     perks: "Manager"
+// } // Object
+
+// const myFnc = function() {
+//     console.log("Hello World");
+// } // Function
+
+/* =============================== Stack and Heap memory =========================================== */
+
+let avengerName = "Tony Stark"
+
+let anotherAvenger = avengerName; // Copy of 'avengerName' into 'anotherAvenger' => Stack Memory
+anotherAvenger = "Thor: God of Thunder"
+// console.table([avengerName, anotherAvenger])
+
+
 let avenger = {
     username: "tony_stark",
     age: 35,
     avengersId: 2,
     role: "Iron Man",
     perks: "Manager"
-} // Object
+}
 
-const myFnc = function() {
-    console.log("Hello World");
-} // Function
+let tony_stark = avenger; // Reference of 'avenger' into 'tony_stark' => Heap Memory
+tony_stark.perks = "Toilet Cleaner"
+
+console.log(avenger);
+console.log(tony_stark);
